@@ -1,0 +1,27 @@
+<h1>Edit your Grocery Item</h1>
+
+
+<form class="form-horizontal" role="form">
+
+<%= form_for @grocery do |f| %>
+
+<div class="form-group">
+	<%= label_tag(:title, "Title") %>
+	<%= f.text_field :title %></br>
+</div>
+
+<div class="form-group">
+	<%= label_tag(:description, "Description") %>
+	<%= f.text_area :description %></br>
+</div>
+
+<div class="form-group">
+	<%= label_tag(:quantity, "Quantity") %>
+	<%=f.text_area :quantity %></br>
+</div>
+
+	<%= f.submit "Update"  %>
+<% end %>
+
+</div>
+</form>

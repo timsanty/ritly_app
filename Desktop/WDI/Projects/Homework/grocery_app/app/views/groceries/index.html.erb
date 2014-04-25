@@ -1,0 +1,13 @@
+<h1>i'm alive</h1>
+
+<%= link_to "New Grocery Item", new_grocery_path, :class => "btn btn-success" %></br>
+
+<% @groceries.each do |grocery| %>
+    <li><%= link_to grocery.title, grocery_path(grocery.id), :class => "btn btn-default btn-s" %>
+    	<%= link_to "edit", edit_grocery_path(grocery[:id]), :class => "btn btn-info btn-xs" %>
+    	<%= link_to "delete", grocery, method: :delete, data: {confirm: "You sure?"},:class => "btn btn-danger btn-xs" %>
+    </li>
+<% end %>
+
+
+
