@@ -1,0 +1,12 @@
+<h1>Its alive!</h1>
+
+<%= form_for @url do |f| %>
+
+	<%= label_tag(:link, "Link:") %>
+	<%= f.text_field :link %></br>
+	<%= f.hidden_field :random_string, value: @random %></br>
+
+	<%= f.submit "Randomize!" %>
+<% end %>
+
+
