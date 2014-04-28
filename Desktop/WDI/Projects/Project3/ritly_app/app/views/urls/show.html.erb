@@ -1,11 +1,9 @@
-<h1>this is where we show the randomly generated link</h1>
 
 
-<h1>URL Show Page</h1>
-<p>Your code is: <%= @url['random_string']%></p>
+<p>Your code is: <%= link_to @url['random_string'], "/go/#{@url['random_string']}" %></p>
 
-<!--<h4>button to /go/randomized_link</h4>
 
-<h4>button to /go/randomized_link/preview</h4> -->
+
+
 
 <%= link_to "Back To Generator",urls_path %>

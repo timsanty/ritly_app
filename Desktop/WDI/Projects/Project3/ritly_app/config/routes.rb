@@ -4,7 +4,6 @@ RitlyApp::Application.routes.draw do
   get '/go/:random_string' => 'urls#go'  
   resources :urls
 
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

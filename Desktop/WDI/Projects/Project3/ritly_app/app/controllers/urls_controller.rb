@@ -16,8 +16,11 @@ class UrlsController < ApplicationController
 
 	def go
 		url = Url.find_by random_string: params[:random_string]
-		redirect_to "https://#{url[:link]}"
+		redirect_to "http://" + url.link
+		#redirect_to "https://#{url[:link]}"
 	end
+
+
 
 	def preview
 		#take original URL and create preview
